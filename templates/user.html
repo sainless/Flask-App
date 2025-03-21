@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{user.email}}
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<h2>Информация о юзере {{user.email}}</h2>
+<table border="1" >
+
+    <thead>
+
+        <tr>
+            
+            <th> Юзернейм </th>
+            <th> Пароль </th>
+        </tr>
+    
+    
+    </thead>
+    
+    
+    <tbody>
+        <tr>
+    
+    
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+        </tr>
+    </tbody>
+    
+
+</table>
+
+
+{%endblock%}

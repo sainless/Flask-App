@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все юзеры в моем сайте
+{% endblock %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <h1>Все юзеры</h1>
+
+    {% for el in users %}
+    <div class="alert alert-info">
+
+       <h2>{{ el.email }}</h2>
+       <a href="/user/{{el.id}}" class="btn btn-warning" >Подробности</a>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
